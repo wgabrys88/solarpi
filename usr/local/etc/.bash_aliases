@@ -1,11 +1,11 @@
-if [ ! -d $EXEC_CMD_WORKSPACE ]; then
-    mkdir $EXEC_CMD_WORKSPACE
+if [ ! -d /tmp/solarpi_workspace/ ]; then
+    mkdir /tmp/solarpi_workspace/
 fi
 
-if [ ! -e $EXEC_FILE_PATH ]; then
-    touch $EXEC_FILE_PATH
+if [ ! -e /tmp/solarpi_workspace/cmd_exec ]; then
+    touch /tmp/solarpi_workspace/cmd_exec
 fi
 
-if [ ! -e $EXEC_FILE_TO_SEND_PATH ]; then
-    touch $EXEC_FILE_TO_SEND_PATH
+if [ ! -e /tmp/solarpi_workspace/exec_to_send ]; then
+    touch /tmp/solarpi_workspace/exec_to_send
 fi
