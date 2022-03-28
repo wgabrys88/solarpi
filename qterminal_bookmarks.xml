@@ -1,0 +1,34 @@
+<qterminal>
+    <group name="SOLARPI">
+        <group name="tools">
+            <command name="" value="git clone https://github.com/wgabrys88/solarpi.git &#38;&#38; cd solarpi/"/>
+            <command name="" value="./solarpi_deploy.sh"/>
+            <command name="" value=""/>
+            <command name="" value="source /usr/local/etc/solarpi_config.cfg"/>
+            <command name="" value="cat /usr/local/etc/solarpi_config.cfg"/>
+            <command name="" value="source /home/$USER/.bash_aliases"/>
+            <command name="" value="cat /home/$USER/.bash_aliases"/>
+            <command name="" value=""/>
+            <command name="" value="vim /usr/local/etc/solarpi_config.cfg"/>
+        </group>
+        <group name="ftp">
+            <command name="" value="ftp_cmd_dir_list.sh"/>
+            <command name="" value="ftp_cmd_file_exists.sh"/>
+            <command name="" value="ftp_cmd_file_put.sh \"/>
+            <command name="" value="ftp_cmd_file_get.sh"/>
+            <command name="" value="ftp_cmd_file_execute.sh"/>
+            <command name="" value="cat /tmp/solarpi_workspace/exec_to_send"/>
+            <command name="" value="cat /tmp/solarpi_workspace/cmd_exec"/>
+        </group>
+        <group name="relay">
+            <command name="" value="relay_init.sh \"/>
+            <command name="" value="relay_deinit.sh \"/>
+            <command name="" value="relay_on.sh \"/>
+            <command name="" value="relay_off.sh \"/>
+        </group>
+        <group name="system">
+            <command name="" value="system_init.sh"/>
+            <command name="" value="system_deinit.sh"/>
+        </group>
+    </group>
+</qterminal>
