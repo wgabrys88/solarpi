@@ -9,10 +9,3 @@ fi
 if [ ! -e $EXEC_FILE_TO_SEND_PATH ]; then
     touch $EXEC_FILE_TO_SEND_PATH
 fi
-
-sleep 0.2
-/usr/local/bin/relay_init.sh 20
-sleep 0.2
-/usr/local/bin/relay_init.sh 21
-sleep 0.2
-
