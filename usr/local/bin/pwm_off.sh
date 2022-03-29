@@ -5,8 +5,4 @@ source /usr/local/etc/pwm_config.cfg
 
 sleep $PWM_INIT_SLEEP
 
-if [ "$1" == "0" ]; then
-    /usr/local/bin/relay_off.sh 21
-elif [ "$1" == "1" ]; then
-    /usr/local/bin/relay_off.sh 20
-fi
+/usr/local/bin/relay_off.sh $(("$1" + 20))

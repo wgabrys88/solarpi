@@ -19,9 +19,5 @@ sleep $PWM_INIT_SLEEP
 /usr/local/bin/pwm_off.sh 1
 sleep $PWM_INIT_SLEEP
 /usr/local/bin/pwm_deinit.sh 1
-sleep $PWM_INIT_SLEEP
-/usr/local/bin/pwm_off.sh 2
-sleep $PWM_INIT_SLEEP
-/usr/local/bin/pwm_deinit.sh 2
 
 sleep $GPIO_RELAY_SWITCH_DELAY
