@@ -3,13 +3,12 @@
         <group name="tools">
             <command name="" value="git clone https://github.com/wgabrys88/solarpi.git &#38;&#38; cd solarpi/"/>
             <command name="" value="./solarpi_deploy.sh"/>
-            <command name="" value=""/>
             <command name="" value="source /usr/local/etc/solarpi_config.cfg"/>
             <command name="" value="cat /usr/local/etc/solarpi_config.cfg"/>
             <command name="" value="source /home/$USER/.bash_aliases"/>
             <command name="" value="cat /home/$USER/.bash_aliases"/>
-            <command name="" value=""/>
             <command name="" value="vim /usr/local/etc/solarpi_config.cfg"/>
+            <command name="" value="crontab -l"/>
         </group>
         <group name="ftp">
             <command name="" value="ftp_cmd_dir_list.sh"/>
@@ -20,15 +19,23 @@
             <command name="" value="cat /tmp/solarpi_workspace/exec_to_send"/>
             <command name="" value="cat /tmp/solarpi_workspace/cmd_exec"/>
         </group>
-        <group name="relay">
-            <command name="" value="relay_init.sh \"/>
-            <command name="" value="relay_deinit.sh \"/>
-            <command name="" value="relay_on.sh \"/>
-            <command name="" value="relay_off.sh \"/>
+        <group name="relay20">
+            <command name="" value="relay_init.sh 20"/>
+            <command name="" value="relay_deinit.sh 20"/>
+            <command name="" value="relay_on.sh 20"/>
+            <command name="" value="relay_off.sh 20"/>
+        </group>
+        <group name="relay21">
+            <command name="" value="relay_init.sh 21"/>
+            <command name="" value="relay_deinit.sh 21"/>
+            <command name="" value="relay_on.sh 21"/>
+            <command name="" value="relay_off.sh 21"/>
         </group>
         <group name="system">
             <command name="" value="system_init.sh"/>
             <command name="" value="system_deinit.sh"/>
+            <command name="" value="watchdog_enable.sh"/>
+            <command name="" value="watchdog_disable.sh"/>
         </group>
     </group>
 </qterminal>
