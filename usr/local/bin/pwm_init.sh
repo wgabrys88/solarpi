@@ -3,7 +3,7 @@ source /usr/local/etc/pwm_config.cfg
 
 if [ ! -d "$PWM_CHIP0/pwm$1/" ]; then
     echo $1 > $PWM_CHIP0_EXPORT
-    while [ ! -e "$PWM_CHIP0/pwm$1/period" ]; do
+    while [ ! -w "$PWM_CHIP0/pwm$1/period" ]; do
         sleep $PWM_INIT_SLEEP
         echo "$PWM_CHIP0/pwm$1/period not yet created, waiting $PWM_INIT_SLEEP[s]..."
     done
