@@ -31,6 +31,24 @@
             <command name="" value="relay_on.sh 21"/>
             <command name="" value="relay_off.sh 21"/>
         </group>
+        <group name="pwm0">
+            <command name="" value="pwm_init.sh 0"/>
+            <command name="" value="pwm_deinit.sh 0"/>
+            <command name="" value="pwm_on.sh 0"/>
+            <command name="" value="pwm_off.sh 0"/>
+        </group>
+        <group name="pwm1">
+            <command name="" value="pwm_init.sh 1"/>
+            <command name="" value="pwm_deinit.sh 1"/>
+            <command name="" value="pwm_on.sh 1"/>
+            <command name="" value="pwm_off.sh 1"/>
+        </group>
+        <group name="pwm2">
+            <command name="" value="pwm_init.sh 2"/>
+            <command name="" value="pwm_deinit.sh 2"/>
+            <command name="" value="pwm_on.sh 2"/>
+            <command name="" value="pwm_off.sh 2"/>
+        </group>
         <group name="system">
             <command name="" value="system_init.sh"/>
             <command name="" value="system_deinit.sh"/>
