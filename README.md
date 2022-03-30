@@ -2,6 +2,7 @@
 Platform for every kind of project:
 independent intercom, remote toy, drone, and even a new Mars rover.
 # A detailed description will be available soon...
+DEMO: https://www.youtube.com/watch?v=DMvWMigjgMY&list=PLBDOR9ZqNeNpt7bb4EgzuAOABzgbZ3tNt
 
 The most important assumptions of the project are:
 low price of components, simplicity (hardware/software), reliability, versatility. (solar panel and battery can be smaller or larger,
