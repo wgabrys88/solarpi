@@ -1,3 +1,5 @@
 #!/bin/bash
+source /usr/local/etc/solarpi_config.cfg
 
-curl -n -T "$1"
+url="ftp://$SOLARPI_FTP_IP/files/solarpi_ftp_working_dir/"
+echo "url = \"$url\"" > ~/.curlrc && curl -n -T "$1"
