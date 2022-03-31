@@ -1,6 +1,7 @@
 #!/bin/bash
+source /usr/local/etc/solarpi_config.cfg
 
-file="$1"
+file="$SOLARPI_WORKSPACE/$1"
 
 if [ -e "$file" ]; then
     echo "Executing: $file"
