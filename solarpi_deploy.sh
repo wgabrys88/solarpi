@@ -1,8 +1,6 @@
 #!/bin/bash
 
-rm -v /home/$USER/.bash_aliases
-cp -v usr/local/etc/.bash_aliases /home/$USER/.bash_aliases
-source /home/$USER/.bash_aliases
+cat ~/.solarpi_ftp_ip >> usr/local/etc/solarpi_config.cfg
 
 sudo rm -vf /usr/local/etc/*
 sudo rm -vf /usr/local/bin/*

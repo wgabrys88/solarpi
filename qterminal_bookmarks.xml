@@ -11,13 +11,10 @@
             <command name="" value="crontab -l"/>
         </group>
         <group name="ftp">
-            <command name="" value="ftp_cmd_dir_list.sh"/>
-            <command name="" value="ftp_cmd_file_exists.sh"/>
-            <command name="" value="ftp_cmd_file_put.sh \"/>
-            <command name="" value="ftp_cmd_file_get.sh"/>
-            <command name="" value="ftp_cmd_file_execute.sh"/>
-            <command name="" value="cat /tmp/solarpi_workspace/exec_to_send"/>
-            <command name="" value="cat /tmp/solarpi_workspace/cmd_exec"/>
+            <command name="" value="ftp_file_put.sh \"/>
+            <command name="" value="ftp_file_get.sh \"/>
+            <command name="" value="file_execute.sh \"/>
+            <command name="" value="cat /tmp/solarpi_workspace/\"/>
         </group>
         <group name="relay20">
             <command name="" value="relay_init.sh 20"/>
