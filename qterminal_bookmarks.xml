@@ -1,14 +1,28 @@
-<qterminal>
     <group name="SOLARPI">
         <group name="tools">
             <command name="" value="git clone https://github.com/wgabrys88/solarpi.git &#38;&#38; cd solarpi/"/>
             <command name="" value="./solarpi_deploy.sh"/>
-            <command name="" value="source /usr/local/etc/solarpi_config.cfg"/>
-            <command name="" value="cat /usr/local/etc/solarpi_config.cfg"/>
-            <command name="" value="source /home/$USER/.bash_aliases"/>
-            <command name="" value="cat /home/$USER/.bash_aliases"/>
-            <command name="" value="vim /usr/local/etc/solarpi_config.cfg"/>
+            <command name="" value="sudo vim /usr/local/etc/solarpi_config.cfg"/>
             <command name="" value="crontab -l"/>
+            <command name="" value="/usr/local/bin/file_execute.sh \"/>
+            <command name="" value="/usr/local/bin/ftp_file_get.sh \"/>
+            <command name="" value="/usr/local/bin/ftp_file_put.sh \"/>
+            <command name="" value="/usr/local/bin/pwm_deinit.sh \"/>
+            <command name="" value="/usr/local/bin/pwm_init.sh \"/>
+            <command name="" value="/usr/local/bin/pwm_power_off.sh \"/>
+            <command name="" value="/usr/local/bin/pwm_start.sh \"/>
+            <command name="" value="/usr/local/bin/pwm_stop.sh \"/>
+            <command name="" value="/usr/local/bin/relay_deinit.sh \"/>
+            <command name="" value="/usr/local/bin/relay_init.sh \"/>
+            <command name="" value="/usr/local/bin/relay_off.sh \"/>
+            <command name="" value="/usr/local/bin/relay_on.sh \"/>
+            <command name="" value="/usr/local/bin/system_deinit.sh \"/>
+            <command name="" value="/usr/local/bin/system_init.sh \"/>
+            <command name="" value="/usr/local/bin/watchdog_disable.sh \"/>
+            <command name="" value="/usr/local/bin/watchdog_enable.sh \"/>
+            <command name="" value="/usr/local/bin/watchdog_job.sh \"/>
+            <command name="" value="/usr/local/etc/pwm_config.cfg \"/>
+            <command name="" value="/usr/local/etc/solarpi_config.cfg \"/>
         </group>
         <group name="ftp">
             <command name="" value="ftp_file_put.sh \"/>
@@ -49,4 +63,3 @@
             <command name="" value="watchdog_disable.sh"/>
         </group>
     </group>
-</qterminal>
