@@ -1,18 +1,10 @@
 #!/bin/bash
+source /usr/local/etc/solarpi_config.cfg
 
 if [ ! -d /tmp/solarpi_workspace/ ]; then
     mkdir /tmp/solarpi_workspace/
+    touch "$SOLARPI_LOG_FILE"
 fi
-
-if [ ! -d /tmp/solarpi_workspace/downloads ]; then
-    mkdir /tmp/solarpi_workspace/downloads
-fi
-
-if [ ! -d /tmp/solarpi_workspace/upload ]; then
-    mkdir /tmp/solarpi_workspace/upload
-fi
-
-source /usr/local/etc/solarpi_config.cfg
 
 sleep "$GPIO_RELAY_SWITCH_DELAY"
 /usr/local/bin/relay_init.sh 20
