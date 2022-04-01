@@ -1,14 +1,10 @@
 #!/bin/bash
+source /usr/local/etc/solarpi_config.cfg
 
-logger "[$(date)] $0 triggered"
-logger "Parameters: $1"
-
-file="$1"
-
-if [ -e "$file" ]; then
-    cat "$file"
-    /bin/bash "$file"
-    logger "[$(date)] $0 file executed"
+if [ -e "$1" ]; then
+    echo "[$(date)] $0 $1 solarpi: job started" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
+    /bin/bash "$1"
+    echo "[$(date)] $0 $1 solarpi: job completed" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
 else
-    logger "[$(date)] $0 FAIL: file not executed"
+    echo "[$(date)] $0 $1 solarpi: failed, wrong argument" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
 fi
