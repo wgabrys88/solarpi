@@ -1,6 +1,6 @@
 #!/bin/bash
 source /usr/local/etc/solarpi_config.cfg
-/usr/local/bin/system_pre_init.sh
+/usr/local/bin/workspace_init.sh
 
 if [ -d "$SOLAR_PI_HOME" ]; then
     echo "[$(date)] $0 solarpi: triggered" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"

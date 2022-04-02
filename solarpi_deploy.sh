@@ -2,6 +2,8 @@
 
 cat ~/.solarpi_ftp_ip >> usr/local/etc/solarpi_config.cfg
 
+rm -rf /tmp/solarpi_workspace/
+
 sudo rm -vf /usr/local/etc/*
 sudo rm -vf /usr/local/bin/*
 

@@ -2,12 +2,18 @@
         <group name="tools">
             <command name="" value="git status"/>
             <command name="" value="git add -A"/>
+            <command name="" value="git pull"/>
+            <command name="" value="git commit -m \"/>
             <command name="" value='git config user.email "wgabrys88@gmail.com"'/>
             <command name="" value='git config user.name "Wojtek"'/>
+            <command name="" value="rm -rf solarpi/"/>
+            <command name="" value="rm -rf /tmp/solarpi_workspace/"/>			
             <command name="" value="git clone https://github.com/wgabrys88/solarpi.git &#38;&#38; cd solarpi/"/>
             <command name="" value="./solarpi_deploy.sh"/>
             <command name="" value="crontab -l"/>
             <command name="" value="sudo vim \"/>
+	        <command name="" value="cat ~/.netrc"/>
+            <command name="" value="ls -la /tmp/solarpi_workspace/"/>
             <command name="" value="/usr/local/bin/file_execute.sh \"/>
             <command name="" value="/usr/local/bin/ftp_file_get.sh \"/>
             <command name="" value="/usr/local/bin/ftp_file_put.sh \"/>
@@ -25,7 +31,7 @@
             <command name="" value="/usr/local/bin/system_init.sh \"/>
             <command name="" value="/usr/local/bin/watchdog_disable.sh \"/>
             <command name="" value="/usr/local/bin/watchdog_enable.sh \"/>
-            <command name="" value="/usr/local/bin/watchdog_job.sh \"/>
+            <command name="" value="/usr/local/bin/watchdog_job.sh"/>
             <command name="" value="/usr/local/etc/pwm_config.cfg \"/>
             <command name="" value="/usr/local/etc/solarpi_config.cfg \"/>
         </group>
@@ -33,7 +39,6 @@
             <command name="" value="ftp_file_put.sh \"/>
             <command name="" value="ftp_file_get.sh \"/>
             <command name="" value="file_execute.sh \"/>
-            <command name="" value="cat /tmp/solarpi_workspace/\"/>
         </group>
         <group name="relay20">
             <command name="" value="relay_init.sh 20"/>
