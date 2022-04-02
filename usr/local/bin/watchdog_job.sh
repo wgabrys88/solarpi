@@ -28,6 +28,3 @@ else
     /usr/local/bin/ftp_file_put.sh "$SOLARPI_WORKSPACE/$CLIENT_LOG_FILE"
     echo "[$(date)] $0 client: finished" >> "$SOLARPI_WORKSPACE/$CLIENT_LOG_FILE"
 fi
-
-
-
