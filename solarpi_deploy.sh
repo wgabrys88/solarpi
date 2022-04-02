@@ -9,3 +9,5 @@ sudo rm -vf /usr/local/bin/*
 
 sudo cp -v usr/local/etc/* /usr/local/etc/
 sudo cp -v usr/local/bin/* /usr/local/bin/
+
+sudo cp -v etc/systemd/system/solarpi-* /etc/systemd/system/

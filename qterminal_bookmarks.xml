@@ -4,8 +4,6 @@
             <command name="" value="git add -A"/>
             <command name="" value="git pull"/>
             <command name="" value="git commit -m \"/>
-            <command name="" value='git config user.email "wgabrys88@gmail.com"'/>
-            <command name="" value='git config user.name "Wojtek"'/>
             <command name="" value="rm -rf solarpi/"/>
             <command name="" value="rm -rf /tmp/solarpi_workspace/"/>			
             <command name="" value="git clone https://github.com/wgabrys88/solarpi.git &#38;&#38; cd solarpi/"/>
@@ -31,8 +29,6 @@
             <command name="" value="/usr/local/bin/system_deinit.sh \"/>
             <command name="" value="/usr/local/bin/system_pre_init.sh \"/>
             <command name="" value="/usr/local/bin/system_init.sh \"/>
-            <command name="" value="/usr/local/bin/watchdog_disable.sh \"/>
-            <command name="" value="/usr/local/bin/watchdog_enable.sh \"/>
             <command name="" value="/usr/local/bin/watchdog_job.sh"/>
             <command name="" value="/usr/local/etc/pwm_config.cfg \"/>
             <command name="" value="/usr/local/etc/solarpi_config.cfg \"/>
