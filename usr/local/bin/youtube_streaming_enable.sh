@@ -1,4 +1,5 @@
 #!/bin/bash
+source /usr/local/etc/solarpi_config.cfg
 
 nohup "/usr/bin/ffmpeg -re -f s16le -i /dev/zero \
 -f v4l2 -thread_queue_size 512 -s 1280x720 -i /dev/video0 \
