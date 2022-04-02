@@ -13,8 +13,8 @@
             <command name="" value="crontab -l"/>
             <command name="" value="sudo vim \"/>
 	        <command name="" value="cat ~/.netrc"/>
-	        <command name="" value="echo 'system_init.sh' > /tmp/solarpi_workspace/solarpi.cmd"/>
-	        <command name="" value="echo 'system_deinit.sh' > /tmp/solarpi_workspace/solarpi.cmd"/>
+	        <command name="" value="echo '/usr/local/bin/system_init.sh' > /tmp/solarpi_workspace/client.cmd"/>
+	        <command name="" value="echo '/usr/local/bin/system_deinit.sh' > /tmp/solarpi_workspace/client.cmd"/>
             <command name="" value="ls -la /tmp/solarpi_workspace/"/>
             <command name="" value="/usr/local/bin/file_execute.sh \"/>
             <command name="" value="/usr/local/bin/ftp_file_get.sh \"/>
