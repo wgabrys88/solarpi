@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cat ~/.solarpi_ftp_ip >> usr/local/etc/solarpi_config.cfg
+cat ~/.youtube_streaming_key >> usr/local/etc/solarpi_config.cfg
 
 rm -rf /tmp/solarpi_workspace/
 
