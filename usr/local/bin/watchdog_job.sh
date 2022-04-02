@@ -21,12 +21,12 @@ if [ -d "$SOLAR_PI_HOME" ]; then
 else
     echo "[$(date)] $0 client: triggered" >> "$SOLARPI_WORKSPACE/$CLIENT_LOG_FILE"
 
-    /usr/local/bin/ftp_file_get.sh "$SOLARPI_LOG_FILE" "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
+    /usr/local/bin/ftp_file_get.sh "$SOLARPI_LOG_FILE" "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE" && \
     echo "[$(date)] $0 client: received file: $SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE" >> \
     "$SOLARPI_WORKSPACE/$CLIENT_LOG_FILE"
 
     /usr/local/bin/ftp_file_put.sh "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
-    rm -f "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+    echo > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 
     /usr/local/bin/ftp_file_put.sh "$SOLARPI_WORKSPACE/$CLIENT_LOG_FILE"
 
