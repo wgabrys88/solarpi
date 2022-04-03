@@ -12,6 +12,8 @@ if [ -d "$SOLAR_PI_HOME" ]; then
     /usr/local/bin/file_execute.sh "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
     rm -f "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 
+    /usr/bin/systemctl status solarpi-youtube.service | /usr/bin/head -n3 >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
+
     # yes | ffmpeg -f v4l2 -video_size 1280x720 -i /dev/video0 -frames 1 "$SOLARPI_WORKSPACE/$CAMERA_CAPTURE_FILE"
     # /usr/local/bin/ftp_file_put.sh "$SOLARPI_WORKSPACE/$CAMERA_CAPTURE_FILE"
 
