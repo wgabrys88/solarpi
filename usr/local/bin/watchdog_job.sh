@@ -8,7 +8,7 @@ if [ -d "$SOLAR_PI_HOME" ]; then
     # echo "[$(date)] $0 solarpi: received file: $SOLARPI_WORKSPACE/$CLIENT_LOG_FILE" >> \
     # "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
 
-    /usr/local/bin/ftp_file_get_del.sh "$CLIENT_CMD_FILE" "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE" && \
+    /usr/local/bin/ftp_file_get_del_via_dir_name.sh
     /usr/local/bin/file_execute.sh "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
     rm -f "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 
