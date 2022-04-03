@@ -8,10 +8,10 @@ echo > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 
 cmd=$(curl -n -l)
 
-if [ $cmd == "stop youtube" ]; then
+if [ $cmd == "StopYoutube" ]; then
     echo "sudo systemctl stop solarpi-youtube.service" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE" && curl -n -l -Q "-RMD $cmd"
 fi
 
-if [ $cmd == "start youtube" ]; then
+if [ $cmd == "StartYoutube" ]; then
     echo "sudo systemctl start solarpi-youtube.service" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE" && curl -n -l -Q "-RMD $cmd"
 fi
