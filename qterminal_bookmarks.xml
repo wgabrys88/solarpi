@@ -5,17 +5,20 @@
             <command name="" value="git pull"/>
             <command name="" value="git commit -m \"/>
             <command name="" value="rm -rf solarpi/"/>
-            <command name="" value="rm -rf /tmp/solarpi_workspace/"/>			
+            <command name="" value="rm -rf /tmp/solarpi_workspace/"/>
             <command name="" value="git clone https://github.com/wgabrys88/solarpi.git &#38;&#38; cd solarpi/"/>
             <command name="" value="./solarpi_deploy.sh"/>
             <command name="" value="crontab -l"/>
             <command name="" value="sudo vim \"/>
-	        <command name="" value="cat ~/.netrc"/>
-	        <command name="" value="echo '/usr/local/bin/youtube_streaming_enable.sh' > /tmp/solarpi_workspace/client.cmd &#38;&#38; /usr/local/bin/watchdog_job.sh"/>
-	        <command name="" value="echo '/usr/local/bin/youtube_streaming_disable.sh' > /tmp/solarpi_workspace/client.cmd &#38;&#38; /usr/local/bin/watchdog_job.sh"/>
-	        <command name="" value="echo '/usr/local/bin/system_init.sh' > /tmp/solarpi_workspace/client.cmd &#38;&#38; /usr/local/bin/watchdog_job.sh"/>
-	        <command name="" value="echo '/usr/local/bin/system_deinit.sh' > /tmp/solarpi_workspace/client.cmd &#38;&#38; /usr/local/bin/watchdog_job.sh"/>
+            <command name="" value="cat ~/.netrc"/>
+            <command name="" value="cat /usr/local/etc/solarpi_config"/>
             <command name="" value="ls -la /tmp/solarpi_workspace/"/>
+            <command name="" value="sudo systemctl stop solarpi-youtube.service"/>
+            <command name="" value="sudo systemctl start solarpi-youtube.service"/>
+            <command name="" value="systemctl status solarpi-youtube.service"/>
+            <command name="" value="sudo systemctl stop solarpi-watchdog.timer"/>
+            <command name="" value="sudo systemctl start solarpi-watchdog.timer"/>
+            <command name="" value="systemctl status solarpi-watchdog.timer"/>
             <command name="" value="/usr/local/bin/file_execute.sh \"/>
             <command name="" value="/usr/local/bin/ftp_file_get.sh \"/>
             <command name="" value="/usr/local/bin/ftp_file_put.sh \"/>
