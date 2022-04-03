@@ -15,13 +15,13 @@ echo "[$(date)] $0 Argument 0: $cmd, argument 1: $arg1, argument2: $arg2" >> "$S
 
 if [ "$arg1" == "stop" ] && [ "$arg2" == "youtube" ]; then
     echo "[$(date)] $0 Egecuting: sudo systemctl $arg1 solarpi-youtube.service" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
-    echo "sudo systemctl $arg1 solarpi-youtube.service" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE" && curl -n -l -Q "-RMD $cmd"
+    echo "sudo systemctl $arg1 solarpi-youtube.service" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 elif [ "$arg1" == "start" ] && [ "$arg2" == "youtube" ]; then
     echo "[$(date)] $0 Egecuting: sudo systemctl $arg1 solarpi-youtube.service" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
-    echo "sudo systemctl $arg1 solarpi-youtube.service" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE" && curl -n -l -Q "-RMD $cmd"
+    echo "sudo systemctl $arg1 solarpi-youtube.service" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 else
     echo "[$(date)] $0 Executing: /usr/local/bin/$cmd.sh $arg1 $arg2" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
-    echo "/usr/local/bin/$cmd.sh $arg1 $arg2" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE" && curl -n -l -Q "-RMD $cmd"
+    echo "/usr/local/bin/$cmd.sh $arg1 $arg2" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 fi
 
 curl -n -l -Q "-RMD $cmd"
