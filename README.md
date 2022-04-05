@@ -1,6 +1,12 @@
 # solarpi
 Platform for every kind of project:
 independent intercom, remote toy, drone, and even a new Mars rover.
+
+#Example of rpi camera streaming to youtube:
+(at the same moment control commands are read from FTP server) - both via cellular network,
+behind firewalls - no problemo!
+https://www.youtube.com/watch?v=ZainAtGB63k&list=LL2jb06pmqOLWtC4lIkkNprQ
+
 # A detailed description will be available soon...
 DEMO: https://www.youtube.com/watch?v=DMvWMigjgMY&list=PLBDOR9ZqNeNpt7bb4EgzuAOABzgbZ3tNt
 
