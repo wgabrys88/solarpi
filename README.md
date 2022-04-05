@@ -12,4 +12,4 @@ but the principle of operation of the system is to be the same)
 On the one hand, it does not make sense, but... it is cheap, simple, without the need to change the network and routers ("universal/simple platform for everyone", remember?)
 and most interestingly it simulates the conditions of the real world, (network latency, data exchange errors) not a laboratory. (a perfect point-to-point connection)
 
-![SolarPi_Diagram](https://user-images.githubusercontent.com/40343971/160515914-40334c9b-f9f9-404a-9b6e-0515d514477b.jpg)
+![SolarPi_Diagram](https://user-images.githubusercontent.com/40343971/161832639-516f8f58-2a54-46cc-bd56-a6e17ebda555.jpg)
