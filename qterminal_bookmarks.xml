@@ -37,6 +37,10 @@
             <command name="" value="/usr/local/bin/watchdog_job.sh"/>
             <command name="" value="/usr/local/etc/pwm_config.cfg \"/>
             <command name="" value="/usr/local/etc/solarpi_config.cfg \"/>
+            <command name="" value="/usr/local/bin/hdmi_power_off.sh"/>
+            <command name="" value="/usr/local/bin/hdmi_power_on.sh"/>
+            <command name="" value="/usr/local/bin/usb_power_off.sh"/>
+            <command name="" value="/usr/local/bin/usb_power_on.sh"/>
         </group>
         <group name="ftp">
             <command name="" value="ftp_file_put.sh \"/>
