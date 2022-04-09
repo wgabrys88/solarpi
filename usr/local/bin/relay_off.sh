@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo in > /sys/class/gpio/gpio$1/direction
+echo in > "/sys/class/gpio/gpio2$1/direction"

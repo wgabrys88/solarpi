@@ -5,10 +5,10 @@ source /usr/local/etc/pwm_config.cfg
 /usr/local/bin/pwm_init.sh "$1"
 
 # Relay init (if needed)
-/usr/local/bin/relay_init.sh $(20 + $1)
+/usr/local/bin/relay_init.sh "$1"
 
 # Relay on
-/usr/local/bin/relay_on.sh $(20 + $1)
+/usr/local/bin/relay_on.sh "$1"
 
 # avoid rush current
 sleep $PWM_INIT_SLEEP
@@ -30,4 +30,4 @@ echo "$PWM_0" > "$PWM_CHIP0/pwm$1/duty_cycle"
 sleep $PWM_INIT_SLEEP
 
 # Relay off
-/usr/local/bin/relay_off.sh $(20 + $1)
+/usr/local/bin/relay_off.sh "$1"
