@@ -51,16 +51,16 @@
             <command name="" value="file_execute.sh \"/>
         </group>
         <group name="relay20">
-            <command name="" value="relay_init.sh 20"/>
-            <command name="" value="relay_deinit.sh 20"/>
-            <command name="" value="relay_on.sh 20"/>
-            <command name="" value="relay_off.sh 20"/>
+            <command name="" value="relay_init.sh 0"/>
+            <command name="" value="relay_deinit.sh 0"/>
+            <command name="" value="relay_on.sh 0"/>
+            <command name="" value="relay_off.sh 0"/>
         </group>
         <group name="relay21">
-            <command name="" value="relay_init.sh 21"/>
-            <command name="" value="relay_deinit.sh 21"/>
-            <command name="" value="relay_on.sh 21"/>
-            <command name="" value="relay_off.sh 21"/>
+            <command name="" value="relay_init.sh 1"/>
+            <command name="" value="relay_deinit.sh 1"/>
+            <command name="" value="relay_on.sh 1"/>
+            <command name="" value="relay_off.sh 1"/>
         </group>
         <group name="pwm0">
             <command name="" value="pwm_init.sh 0"/>

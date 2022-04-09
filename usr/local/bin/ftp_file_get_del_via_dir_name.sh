@@ -21,10 +21,25 @@ if [ "$arg1" == "stop" ] && [ "$arg2" == "youtube" ]; then
 elif [ "$arg1" == "start" ] && [ "$arg2" == "youtube" ]; then
     echo "[$(date)] $0 Egecuting: sudo systemctl $arg1 solarpi-youtube.service" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
     echo "sudo systemctl $arg1 solarpi-youtube.service" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+
+# Motor right slow forward
+elif [ "$arg1" == "right" ] && [ "$arg2" == "forward" ]; then
+    echo "/usr/local/bin/motor_start.sh 0 1423000 $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+# Motor right slow backward
+elif [ "$arg1" == "right" ] && [ "$arg2" == "backward" ]; then
+    echo "/usr/local/bin/motor_start.sh 0 1623000 $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+
+# Motor left slow forward
+elif [ "$arg1" == "left" ] && [ "$arg2" == "forward" ]; then
+    echo "sudo /usr/local/bin/motor_start.sh 1 1623000 $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+# Motor left slow backward
+elif [ "$arg1" == "left" ] && [ "$arg2" == "backward" ]; then
+    echo "/usr/local/bin/motor_start.sh 1 1423000 $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+
 # Run motor
-elif [ "$arg1" == "motor" ]; then
-    echo "[$(date)] $0 Executing: /usr/local/bin/motor_start.sh $arg1 $arg2 $arg3" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
-    echo "/usr/local/bin/motor_start.sh $arg1 $arg2 $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+# elif [ "$arg1" == "motor" ]; then
+#     echo "[$(date)] $0 Executing: /usr/local/bin/motor_start.sh $arg1 $arg2 $arg3" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
+#     echo "/usr/local/bin/motor_start.sh $arg1 $arg2 $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 # Run command
 else
     echo "[$(date)] $0 Executing: /usr/local/bin/$cmd.sh $arg1 $arg2" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
