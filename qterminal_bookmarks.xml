@@ -1,5 +1,7 @@
     <group name="SOLARPI">
         <group name="tools">
+		    <command name="" value="sudo reboot"/>
+		    <command name="" value="sudo shutdown now"/>
             <command name="" value="git status"/>
             <command name="" value="git add -A"/>
             <command name="" value="git pull"/>
@@ -39,6 +41,7 @@
             <command name="" value="/usr/local/etc/solarpi_config.cfg \"/>
             <command name="" value="/usr/local/bin/hdmi_power_off.sh"/>
             <command name="" value="/usr/local/bin/hdmi_power_on.sh"/>
+            <command name="" value="/usr/local/bin/motor_start.sh \"/>
             <command name="" value="/usr/local/bin/usb_power_off.sh"/>
             <command name="" value="/usr/local/bin/usb_power_on.sh"/>
         </group>
