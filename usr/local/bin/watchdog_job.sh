@@ -11,6 +11,7 @@ if [ -d "$SOLAR_PI_HOME" ]; then
     /usr/local/bin/ftp_file_get_del_via_dir_name.sh
     /usr/local/bin/file_execute.sh "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
     echo > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+    echo > "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE" # TODO: rewrite logging, takes too much network/size/ssdwear/IO...
 
     # /usr/bin/systemctl status solarpi-youtube.service | /usr/bin/head -n3 >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
 

@@ -14,6 +14,7 @@
             <command name="" value="sudo vim \"/>
             <command name="" value="cat ~/.netrc"/>
             <command name="" value="cat /usr/local/etc/solarpi_config"/>
+            <command name="" value="cat /tmp/solarpi_workspace/solarpi.log"/>
             <command name="" value="ls -la /tmp/solarpi_workspace/"/>
             <command name="" value="sudo systemctl stop solarpi-youtube.service"/>
             <command name="" value="sudo systemctl start solarpi-youtube.service"/>
