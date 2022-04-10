@@ -16,11 +16,9 @@ echo "[$(date)] $0 Arg 0: $cmd, arg 1: $arg1, arg 2: $arg2, arg 3: $arg3" >> "$S
 
 # Stop youtube service
 if [ "$arg1" == "stop" ] && [ "$arg2" == "youtube" ]; then
-    echo "[$(date)] $0 Egecuting: sudo systemctl $arg1 solarpi-youtube.service" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
     echo "sudo systemctl $arg1 solarpi-youtube.service" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 # Start youtube service
 elif [ "$arg1" == "start" ] && [ "$arg2" == "youtube" ]; then
-    echo "[$(date)] $0 Egecuting: sudo systemctl $arg1 solarpi-youtube.service" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
     echo "sudo systemctl $arg1 solarpi-youtube.service" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 
 # Motor: right, speed: slow, direction: forward
