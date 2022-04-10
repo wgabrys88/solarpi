@@ -42,7 +42,7 @@ elif [ "$cmd" == "shutdown" ]; then
 
 # Run command
 else
-    echo "[$(date)] $0 Executing: /usr/local/bin/$cmd.sh $arg1 $arg2" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
+    # echo "[$(date)] $0 Executing: /usr/local/bin/$cmd.sh $arg1 $arg2" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
     echo "/usr/local/bin/$cmd.sh $arg1 $arg2" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 fi
 
