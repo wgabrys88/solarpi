@@ -37,6 +37,11 @@ elif [ "$arg1" == "left" ] && [ "$arg2" == "forward" ]; then
 elif [ "$arg1" == "left" ] && [ "$arg2" == "backward" ]; then
     echo "/usr/local/bin/motor_start.sh 1 1513000 $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 
+elif [ "$cmd" == "reboot" ]; then
+    echo "sudo reboot" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+elif [ "$cmd" == "shutdown" ]; then
+    echo "sudo shutdown now" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+
 # Run command
 else
     echo "[$(date)] $0 Executing: /usr/local/bin/$cmd.sh $arg1 $arg2" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
