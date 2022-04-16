@@ -1,9 +1,6 @@
 #!/bin/bash
 source /usr/local/etc/pwm_config.cfg
 
-# Initialize Workspace (if needed)
-/usr/local/bin/workspace_init.sh # TODO: do this init process properly (make de/init as a service)
-
 # Initialize PWM (if needed)
 /usr/local/bin/pwm_init.sh "$1"
 
