@@ -35,9 +35,9 @@ elif [ "$arg1" == "left" ] && [ "$arg2" == "forward" ]; then
 elif [ "$arg1" == "left" ] && [ "$arg2" == "backward" ]; then
     echo "/usr/local/bin/motor_start.sh 1 1513000 $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 
-# ADMIN
-elif [ "$arg1" == "admin" ]; then
-    echo "$arg2" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+# # ADMIN
+# elif [ "$arg1" == "admin" ]; then
+#     echo "$arg2" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 
 # Reboot
 elif [ "$cmd" == "reboot" ]; then
