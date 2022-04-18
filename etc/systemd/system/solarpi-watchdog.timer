@@ -2,7 +2,7 @@
 Description="solarpi timer: timer for solarpi-watchdog.service"
 [Timer]
 OnBootSec=10
-OnUnitInactiveSec=2
+OnUnitInactiveSec=1
 AccuracySec=1ms
 [Install]
 WantedBy=timers.target
