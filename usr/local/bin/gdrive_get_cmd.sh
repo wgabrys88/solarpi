@@ -8,7 +8,7 @@ cmd=$(rclone ls remote:)
 # echo "[$(date)] $0 Received: $cmd, converting..." >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
 arg1=$(echo "$cmd" | awk -F " " '{print $2}')
 arg2=$(echo "$cmd" | awk -F " " '{print $3}')
-arg3=$(echo "$cmd" | awk -F " " '{print $4}')
+arg3=$(echo "$cmd" | awk -F " " '{print $4}' | awk -F "." '{print $1}')
 # echo "[$(date)] $0 Arg 0: $cmd, arg 1: $arg1, arg 2: $arg2, arg 3: $arg3" >> "$SOLARPI_WORKSPACE/$SOLARPI_LOG_FILE"
 
 # Stop youtube service
