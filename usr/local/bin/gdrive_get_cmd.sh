@@ -40,10 +40,10 @@ elif [ "$arg1" == "left" ] && [ "$arg2" == "backward" ]; then
 
 # Reboot
 elif [ "$cmd" == "reboot" ]; then
-    echo "sudo reboot" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
     rclone delete remote:
+    echo "sudo reboot" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 # Shutdown Now
 elif [ "$cmd" == "shutdown" ]; then
-    echo "sudo shutdown now" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
     rclone delete remote:
+    echo "sudo shutdown now" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
 fi
