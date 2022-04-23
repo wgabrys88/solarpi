@@ -1,0 +1,6 @@
+[Unit]
+Description="solarpi motor-1 service"
+[Service]
+User=pi
+WorkingDirectory=/home/pi/
+ExecStart=sh -c '/usr/local/bin/motor_1_job.sh'

@@ -12,3 +12,4 @@ sudo cp -v usr/local/etc/* /usr/local/etc/
 sudo cp -v usr/local/bin/* /usr/local/bin/
 
 sudo cp -v etc/systemd/system/solarpi-* /etc/systemd/system/
+sudo cp -v etc/systemd/system/motor-* /etc/systemd/system/
