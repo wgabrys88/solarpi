@@ -1,7 +1,11 @@
 #!/bin/bash
 source /usr/local/etc/solarpi_config.cfg
 
-echo > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+MOTOR_0_FILE_PATH="$SOLARPI_WORKSPACE/$MOTOR_0_SERVICE_FILE"
+MOTOR_1_FILE_PATH="$SOLARPI_WORKSPACE/$MOTOR_1_SERVICE_FILE"
+
+CMD_FILE_PATH="$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+echo > "$CMD_FILE_PATH"
 
 cmd=$(rclone ls remote:)
 
@@ -13,37 +17,41 @@ arg3=$(echo "$cmd" | awk -F " " '{print $4}' | awk -F "." '{print $1}')
 
 # Stop youtube service
 if [ "$arg1" == "stop" ] && [ "$arg2" == "youtube" ]; then
-    echo "sudo systemctl $arg1 solarpi-youtube.service" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+    echo "sudo systemctl $arg1 solarpi-youtube.service" > "$CMD_FILE_PATH"
     rclone delete remote:
 # Start youtube service
 elif [ "$arg1" == "start" ] && [ "$arg2" == "youtube" ]; then
-    echo "sudo systemctl $arg1 solarpi-youtube.service" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+    echo "sudo systemctl $arg1 solarpi-youtube.service" > "$CMD_FILE_PATH"
     rclone delete remote:
 
 # Motor: right, speed: fast, direction: forward
 elif [ "$arg1" == "right" ] && [ "$arg2" == "forward" ]; then
-    echo "/usr/local/bin/motor_start.sh 0 $MOTOR_FF $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+    echo "0 $MOTOR_FF $arg3" > "$MOTOR_0_FILE_PATH"
+    echo "sudo systemctl start motor-0.service" > "$CMD_FILE_PATH"
     rclone delete remote:
 # ... direction: backward
 elif [ "$arg1" == "right" ] && [ "$arg2" == "backward" ]; then
-    echo "/usr/local/bin/motor_start.sh 0 $MOTOR_FB $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+    echo "0 $MOTOR_FB $arg3" > "$MOTOR_0_FILE_PATH"
+    echo "sudo systemctl start motor-0.service" > "$CMD_FILE_PATH"
     rclone delete remote:
 
 # Motor: left, speed: fast, direction: forward
 elif [ "$arg1" == "left" ] && [ "$arg2" == "forward" ]; then
-    echo "/usr/local/bin/motor_start.sh 1 $MOTOR_FB $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+    echo "1 $MOTOR_FB $arg3" > "$MOTOR_1_FILE_PATH"
+    echo "sudo systemctl start motor-1.service" > "$CMD_FILE_PATH"
     rclone delete remote:
 # ... direction: backward
 elif [ "$arg1" == "left" ] && [ "$arg2" == "backward" ]; then
-    echo "/usr/local/bin/motor_start.sh 1 $MOTOR_FF $arg3" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+    echo "1 $MOTOR_FF $arg3" > "$MOTOR_1_FILE_PATH"
+    echo "sudo systemctl start motor-1.service" > "$CMD_FILE_PATH"
     rclone delete remote:
 
 # Reboot
 elif [ "$arg1" == "reboot" ]; then
     rclone delete remote:
-    echo "sudo reboot" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+    echo "sudo reboot" > "$CMD_FILE_PATH"
 # Shutdown Now
 elif [ "$arg1" == "shutdown" ]; then
     rclone delete remote:
-    echo "sudo shutdown now" > "$SOLARPI_WORKSPACE/$CLIENT_CMD_FILE"
+    echo "sudo shutdown now" > "$CMD_FILE_PATH"
 fi
