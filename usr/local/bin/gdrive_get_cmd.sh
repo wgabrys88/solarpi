@@ -60,6 +60,20 @@ elif [ "$arg1" == "all" ] && [ "$arg2" == "backward" ]; then
     echo "sudo systemctl start motor-0.service" > "$CMD_FILE_PATH"
     echo "sudo systemctl start motor-1.service" >> "$CMD_FILE_PATH"
     rclone delete remote:
+# ... direction: left (device, not motors really..., rewrite this mess)
+elif [ "$arg1" == "all" ] && [ "$arg2" == "left" ]; then
+    echo "0 $MOTOR_FF $arg3" > "$MOTOR_0_FILE_PATH"
+    echo "1 $MOTOR_FF $arg3" > "$MOTOR_1_FILE_PATH"
+    echo "sudo systemctl start motor-0.service" > "$CMD_FILE_PATH"
+    echo "sudo systemctl start motor-1.service" >> "$CMD_FILE_PATH"
+    rclone delete remote:
+# ... direction: right (device, not motors really..., rewrite this mess)
+elif [ "$arg1" == "all" ] && [ "$arg2" == "right" ]; then
+    echo "0 $MOTOR_FB $arg3" > "$MOTOR_0_FILE_PATH"
+    echo "1 $MOTOR_FB $arg3" > "$MOTOR_1_FILE_PATH"
+    echo "sudo systemctl start motor-0.service" > "$CMD_FILE_PATH"
+    echo "sudo systemctl start motor-1.service" >> "$CMD_FILE_PATH"
+    rclone delete remote:
 
 # Reboot
 elif [ "$arg1" == "reboot" ]; then
